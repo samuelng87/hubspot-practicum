@@ -1,125 +1,84 @@
 * {
     box-sizing: border-box;
-    font-family: Helvetica, sans-serif;
 }
 
 html,
 body {
     margin: 0;
     padding: 0;
-    background-color: #eee;
+  background-color:{{theme.body_background_color.color}};
+    font-family: {{ theme.font.font }};
 }
 
-.page-wrap {
-    color: {{ theme.text_color.color }};
-    max-width: 1100px;
-    margin: 0 auto;
-    background-color: #ddd;
-    padding:1em;
-    min-height: 100vh;
-}
 
 header {
-    text-transform: uppercase;
-    background-color: {{ theme.background_color.color }};
-    color: {{ theme.text_color.color }};
-    padding: 1em 50% 1em 2em;
-    border-radius: 0.5em;
-    margin-bottom: 3em;
+    padding: 1rem;
+    background-color: {{ theme.h_background_color.color }};
+    border-bottom: 1px solid #aaaaaa;
+    padding:2%; 
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-/* More specific selectors to override potential conflicts */
-header h1,
-header h2,
-header h3,
-header p,
-header a,
-header span,
-header div {
-    color: {{ theme.text_color.color }} !important;
+.header-desc {
+    margin: 1rem 0 2rem;
 }
 
-/* Menu Styles */
-.hs-menu-wrapper.hs-menu-flow-horizontal {
-    display: flex;
-    gap: 2rem;
-}
-
-.hs-menu-wrapper.hs-menu-flow-horizontal > ul {
-    display: flex;
-    gap: 2rem;
+.hs-menu-wrapper ul {
     list-style: none;
     padding: 0;
-    margin: 20px;
+    margin-bottom: 1rem;
+    display: flex;
 }
 
-.hs-menu-wrapper.hs-menu-flow-horizontal > ul li a {
-    color: white;
+.hs-menu-wrapper ul li {
+    margin-right: 1rem;
+}
+
+.hs-menu-wrapper ul li a {
     text-decoration: none;
-    font-size: 1rem;
-    padding: 0.5rem;
-    transition: opacity 0.2s ease;
+    color:{{ theme.menu_color.color }};
 }
-
-.hs-menu-wrapper.hs-menu-flow-horizontal > ul li a:hover {
-    opacity: 0.8;
-}
-
-/* Active/Current Page Link */
-.hs-menu-wrapper.hs-menu-flow-horizontal > ul li.active > a,
-.hs-menu-wrapper.hs-menu-flow-horizontal > ul li.active-branch > a {
+.hs-menu-wrapper ul li.active-branch > a {
+    color: {{ theme.menu_color.color }} !important;
     font-weight: bold;
 }
 
-/* Modular Homes Section */
-.modular-homes-container {
-  padding: 2rem 0;
+.hs-menu-wrapper ul li a:hover {
+    text-decoration: underline;
 }
 
-.modular-homes-title {
-  margin-bottom: 2rem;
-  text-align: center;
-  color: {{ theme.text_color.color }};
+.modular-section {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:20px;
+    opacity: 0; 
+    animation: modularFadeIn 2s ease-in forwards;
 }
 
-/* Flex layout for the dnd section */
-[data-dnd-area="modular-homes"] .dnd-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
+.modular-section img {
+  border-radius:10px;
+  box-shadow: 3px 7px 7px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
-[data-dnd-area="modular-homes"] .dnd-column {
-  flex: 1 1 400px;
+@keyframes modularFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.featured-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+footer {
+    padding: 1rem;
+    background-color: {{ theme.f_background_color.color }};
+    border-bottom: 1px solid #aaaaaa;
+    padding:2%; 
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    
 }
-
-.content-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  [data-dnd-area="modular-homes"] .dnd-section {
-    flex-direction: column;
-  }
-  
-  .modular-homes-title {
-    padding-left: 0;
-    margin-bottom: 1.5rem;
-  }
-}
-
-
-
-

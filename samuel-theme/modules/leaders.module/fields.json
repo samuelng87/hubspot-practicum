@@ -4,6 +4,12 @@
   "label" : "team",
   "required" : false,
   "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "",
+    "default" : 1
+  },
   "children" : [ {
     "id" : "e37b17ec-ee77-8c46-65b7-331222955ba8",
     "name" : "image_leader",
@@ -16,12 +22,14 @@
     "type" : "image",
     "display_width" : null,
     "default" : {
-      "src" : "https://48134754.fs1.hubspotusercontent-na1.net/hubfs/48134754/favicon-1.ico",
-      "alt" : "favicon-1",
-      "width" : 16,
-      "height" : 16,
-      "max_width" : 16,
-      "max_height" : 16
+      "src" : "https://48134754.fs1.hubspotusercontent-na1.net/hubfs/48134754/Enhanced-Image.jpg",
+      "alt" : "Enhanced-Image",
+      "width" : 600,
+      "height" : 438,
+      "max_width" : 400,
+      "max_height" : 292,
+      "size_type" : "exact",
+      "loading" : "eager"
     }
   }, {
     "id" : "95543940-3b35-8b2a-fecc-1b48e367d651",
@@ -33,7 +41,8 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "display_width" : null
+    "display_width" : null,
+    "default" : "Name"
   }, {
     "id" : "dd0245df-5a88-b2c7-9abc-2f774e006ad0",
     "name" : "text_desc",
@@ -44,21 +53,26 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "display_width" : null
+    "display_width" : null,
+    "default" : "Description"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "display_width" : null,
-  "default" : {
+  "default" : [ {
     "image_leader" : {
-      "src" : "https://48134754.fs1.hubspotusercontent-na1.net/hubfs/48134754/favicon-1.ico",
-      "alt" : "favicon-1",
-      "width" : 16,
-      "height" : 16,
-      "max_width" : 16,
-      "max_height" : 16
-    }
-  }
+      "src" : "https://48134754.fs1.hubspotusercontent-na1.net/hubfs/48134754/Enhanced-Image.jpg",
+      "alt" : "Enhanced-Image",
+      "width" : 600,
+      "height" : 438,
+      "max_width" : 400,
+      "max_height" : 292,
+      "size_type" : "exact",
+      "loading" : "eager"
+    },
+    "text_name" : "Name",
+    "text_desc" : "Description"
+  } ]
 } ]

@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     {{ require_css(get_asset_url('../css/main.css')) }}
+    {{ require_css(get_asset_url('../css/layout.css')) }}
 
     {{ standard_header_includes }}
   </head>
@@ -21,45 +22,38 @@
     <div class="page-wrap">
       {% global_partial path="./partials/header.html" %}
       
-      <div class="modular-homes-container">
-        <h1 class="modular-homes-title">Modular Homes</h1>
-            
-        {% dnd_area "modular-homes" label="Modular Homes" %}
-          {% dnd_section
-            padding={
-              top: 30,
-              bottom: 30,
-              left: 20,
-              right: 20
-            }
-            background_color={
-              color: "#f8f9fa"
-            }
-          %}
-            {% dnd_row %}
+<h1 style="padding-left:30px;">Modular Homes</h1>
+        <section class="modular-section">
+          {% dnd_area "modular" label="modular Area" %}
+            {% dnd_section
+              padding={
+                top: 10,
+                bottom: 10,
+                left: 0,
+                right: 0
+              }
+            %}
               {% dnd_column width=6 %}
-                <div class="featured-image">
-                  {% dnd_module "image" path="@hubspot/image" 
-                    flexbox_positioning="MIDDLE_CENTER"
-                    label="Featured Image" %}
-                  {% end_dnd_module %}
-                </div>
+                {% dnd_row %}
+                  <div class="featured-image">
+                    {% dnd_module "image" path="@hubspot/image" flexbox_positioning="MIDDLE_CENTER", label="Featured Image" %}
+                    {% end_dnd_module %}
+                  </div>
+                {% end_dnd_row %}
               {% end_dnd_column %}
-              
-              {% dnd_column width=6 %}
-                <div class="content-container">
+              {% dnd_column width=6, offset=6 %}
+                {% dnd_row %}
                   {% dnd_module "rich_text" path="@hubspot/rich_text" label="Mission Statement" %}
                   {% end_dnd_module %}
-                </div>
+                {% end_dnd_row %}
               {% end_dnd_column %}
-            {% end_dnd_row %}
-          {% end_dnd_section %}
-        {% end_dnd_area %}
-      </div>
+            {% end_dnd_section %}
+          {% end_dnd_area %}
+        </section>
 
-      <h1 style="padding-left:30px;">Modular Types</h1>
-      {% module "module_174568199871362" path="/samuel-theme/modules/leaders", label="leaders" %}
-      {% global_partial path="./partials/footer.html" %}
+<h1 style="padding-left:30px;">Modular Types</h1>
+    {% module "module_174568199871362" path="/samuel-theme/modules/leaders", label="leaders" %}
+    {% global_partial path="./partials/footer.html" %}
     </div>
     {{ standard_footer_includes }}
 

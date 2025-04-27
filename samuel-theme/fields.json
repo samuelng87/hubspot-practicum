@@ -1,4 +1,12 @@
 [     
+    {
+        "label": "Navigation Bar Color",
+        "name": "menu_color",
+        "type": "color",
+        "default": {
+            "color": "#ffffff"
+        }
+    },
   {
         "label": "Body Background Color",
         "name": "body_background_color",
@@ -42,3 +50,4 @@
     }
 
 ]
+
