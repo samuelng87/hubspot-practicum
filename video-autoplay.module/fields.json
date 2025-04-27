@@ -1,0 +1,52 @@
+[ {
+  "id" : "f82ea561-939f-eec0-62b6-c3404bde60a7",
+  "name" : "image_field",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://48134754.fs1.hubspotusercontent-na1.net/hubfs/48134754/icons8-live-video-on.gif",
+    "alt" : "icons8-live-video-on",
+    "loading" : "lazy",
+    "width" : 48,
+    "height" : 48,
+    "max_width" : 48,
+    "max_height" : 48
+  }
+}, {
+  "id" : "55cf6ccc-6f1b-357d-96af-834b91fcdc85",
+  "name" : "richtext_field",
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Live"
+}, {
+  "id" : "c1625fca-384d-40c8-4021-bde949e56310",
+  "name" : "image_field_1",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://48134754.fs1.hubspotusercontent-na1.net/hubfs/48134754/icons8-speaker-50.png",
+    "alt" : "icons8-speaker-50",
+    "loading" : "lazy",
+    "width" : 50,
+    "height" : 50,
+    "max_width" : 50,
+    "max_height" : 50
+  }
+} ]

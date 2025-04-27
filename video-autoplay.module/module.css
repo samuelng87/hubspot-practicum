@@ -1,0 +1,30 @@
+#playButton {
+  display: none;
+}
+
+
+#muteButton {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+#muteButton:hover {
+  background-color: #0056b3;
+}
+
+.icon-img img {
+width:27px;
+}
+
+.img-text-flex {
+display:flex;
+}
+
+#timer-20c {
+Color:red;
+margin-left:10px;
+}
