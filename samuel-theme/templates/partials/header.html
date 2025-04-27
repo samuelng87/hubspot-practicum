@@ -1,0 +1,18 @@
+<!--
+    templateType: global_partial
+    label: Global partial
+    isAvailableForNewContent: false
+-->
+<!-- Begin partial -->
+
+<header>
+    <h1>{% module "site_name" path="@hubspot/text" value="Header Name" %}</h1>
+        <div class="header-desc">
+            {% module "header_quote" path="@hubspot/rich_text" label="Header Description" %}
+        </div>
+          {% module "menu" path="@hubspot/menu" label="Menu" %}      
+    </header>
+
+<!-- End partial -->
+
+

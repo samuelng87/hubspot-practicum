@@ -1,0 +1,24 @@
+<!-- module html  -->
+<div class="leaders">
+    {% for member in module.team_field %}
+		<div class="team-leaders">
+			<div class="leaders-image">
+        {% if module.team_field.image_leader.src %}
+        {% set sizeAttrs = 'width="{{ module.team_field.image_leader.width|escape_attr }}" height="{{ module.team_field.image_leader.height|escape_attr }}"' %}
+        {% if module.team_field.image_leader.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.team_field.image_leader.width|escape_attr }}" height="{{ module.team_field.image_leader.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+        {% elif module.team_field.image_leader.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.team_field.image_leader.max_width|escape_attr }}" height="{{ module.team_field.image_leader.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+         {% set loadingAttr = module.team_field.image_leader.loading != 'disabled' ? 'loading="{{ module.team_field.image_leader.loading|escape_attr }}"' : '' %}
+        <img src="{{ module.team_field.image_leader.src|escape_url }}" alt="{{ module.team_field.image_leader.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+      {% endif %}
+
+			</div>
+			<div class="leaders-info">
+        {% inline_text field="team_field.text_name" value="{{ module.team_field.text_name }}" %}
+        {% inline_text field="team_field.text_desc" value="{{ module.team_field.text_desc }}" %}
+			</div>
+		</div>
+	{% endfor %}
+</div>

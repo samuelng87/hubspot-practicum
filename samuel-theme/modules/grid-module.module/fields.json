@@ -1,0 +1,31 @@
+[ {
+  "id" : "177e5cf4-67fd-7ab3-c708-f5e8c9b49b61",
+  "name" : "image_field",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto_custom_max",
+    "src" : "https://48134754.fs1.hubspotusercontent-na1.net/hubfs/48134754/Image-1-(11).jpg",
+    "alt" : "Image-1-(11)",
+    "loading" : "lazy",
+    "width" : 3840,
+    "height" : 2800,
+    "max_width" : 2000,
+    "max_height" : 1458.3333333333333
+  }
+}, {
+  "id" : "e95835ee-4c65-4f53-1575-8b24f15dc665",
+  "name" : "richtext_field",
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h4>Modular Name</h4>\n<p>Suburb Name</p>\n<p>&nbsp;</p>"
+} ]

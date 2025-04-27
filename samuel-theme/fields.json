@@ -1,0 +1,44 @@
+[     
+  {
+        "label": "Body Background Color",
+        "name": "body_background_color",
+        "type": "color",
+        "default": {
+            "color": "#ffffff"
+        }
+    },
+    {
+        "label": "Header Background Color",
+        "name": "h_background_color",
+        "type": "color",
+        "default": {
+            "color": "#ffffff"
+        }
+    },
+     {
+        "label": "Footer Background Color",
+        "name": "f_background_color",
+        "type": "color",
+        "default": {
+            "color": "#ffffff"
+        }
+    },
+    {
+        "name": "font",
+        "label": "Font",
+        "required": false,
+        "locked": false,
+        "load_external_fonts": false,
+        "type": "font",
+        "default": {
+            "size": 12,
+            "font":"Bebas Neue",
+            "font_set": "GOOGLE",
+            "size_unit": "px",
+            "styles": {
+            
+            }
+        }
+    }
+
+]

@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+
+.page-wrap {
+    color: {{ theme.text_color.color }};
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ddd;
+    padding:1em;
+    min-height: 100vh;
+}
+
+header {
+    text-transform: uppercase;
+    background-color: {{ theme.background_color.color }};
+    color: {{ theme.text_color.color }};
+    padding: 1em 50% 1em 2em;
+    border-radius: 0.5em;
+    margin-bottom: 3em;
+}
+
+/* More specific selectors to override potential conflicts */
+header h1,
+header h2,
+header h3,
+header p,
+header a,
+header span,
+header div {
+    color: {{ theme.text_color.color }} !important;
+}
+
+/* Menu Styles */
+.hs-menu-wrapper.hs-menu-flow-horizontal {
+    display: flex;
+    gap: 2rem;
+}
+
+.hs-menu-wrapper.hs-menu-flow-horizontal > ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.hs-menu-wrapper.hs-menu-flow-horizontal > ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: opacity 0.2s ease;
+}
+
+.hs-menu-wrapper.hs-menu-flow-horizontal > ul li a:hover {
+    opacity: 0.8;
+}
+
+/* Active/Current Page Link */
+.hs-menu-wrapper.hs-menu-flow-horizontal > ul li.active > a,
+.hs-menu-wrapper.hs-menu-flow-horizontal > ul li.active-branch > a {
+    font-weight: bold;
+}
+
+/* Modular Homes Section */
+.modular-homes-container {
+  padding: 2rem 0;
+}
+
+.modular-homes-title {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: {{ theme.text_color.color }};
+}
+
+/* Flex layout for the dnd section */
+[data-dnd-area="modular-homes"] .dnd-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+[data-dnd-area="modular-homes"] .dnd-column {
+  flex: 1 1 400px;
+}
+
+.featured-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  [data-dnd-area="modular-homes"] .dnd-section {
+    flex-direction: column;
+  }
+  
+  .modular-homes-title {
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+

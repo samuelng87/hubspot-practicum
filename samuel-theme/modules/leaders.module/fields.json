@@ -1,0 +1,64 @@
+[ {
+  "id" : "c6f93be8-a3db-cd80-e2d9-5c20bf0c964a",
+  "name" : "team_field",
+  "label" : "team",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "e37b17ec-ee77-8c46-65b7-331222955ba8",
+    "name" : "image_leader",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "https://48134754.fs1.hubspotusercontent-na1.net/hubfs/48134754/favicon-1.ico",
+      "alt" : "favicon-1",
+      "width" : 16,
+      "height" : 16,
+      "max_width" : 16,
+      "max_height" : 16
+    }
+  }, {
+    "id" : "95543940-3b35-8b2a-fecc-1b48e367d651",
+    "name" : "text_name",
+    "label" : "Text Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null
+  }, {
+    "id" : "dd0245df-5a88-b2c7-9abc-2f774e006ad0",
+    "name" : "text_desc",
+    "label" : "Text Description",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "image_leader" : {
+      "src" : "https://48134754.fs1.hubspotusercontent-na1.net/hubfs/48134754/favicon-1.ico",
+      "alt" : "favicon-1",
+      "width" : 16,
+      "height" : 16,
+      "max_width" : 16,
+      "max_height" : 16
+    }
+  }
+} ]

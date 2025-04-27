@@ -1,0 +1,25 @@
+<!--
+    templateType: global_partial
+    label: Global partial
+    isAvailableForNewContent: false
+-->
+<!-- Begin partial -->
+
+{% dnd_area "footer" 
+    label="Footer"
+    class="footer-dnd-area" %}
+    {% dnd_section %}
+        {% dnd_column %}
+            <footer>
+
+                    {% module "footer_copyright"
+                        path="@hubspot/text"
+                        label="Copyright Text"
+                        value="All rights reserved © {{ year }} {{ site_settings.company_name }}."
+                    %}
+                </div>
+            </footer>
+        {% end_dnd_column %}
+    {% end_dnd_section %}
+{% end_dnd_area %}
+<!-- End partial -->
